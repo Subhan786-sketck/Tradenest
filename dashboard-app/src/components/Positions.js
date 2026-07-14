@@ -544,10 +544,10 @@ const Positions = () => {
           {positions.length > 0 && `⏱️ Last sync: ${lastUpdated?.toLocaleString() || 'Never'}`}
         </div>
         <div>
-          🟢 Live: {positions.filter(p => p.isYahooLive).length} stocks
+           Live: {positions.filter(p => p.isYahooLive).length} stocks
         </div>
         <div>
-          📦 Total: {positions.length} stocks
+           Total: {positions.length} stocks
         </div>
       </div>
     </div>
