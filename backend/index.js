@@ -539,14 +539,14 @@ const yahooFinance = require('yahoo-finance2');
 // 1. GET all positions (static se ya DB se)
 app.get('/api/positions', async (req, res) => {
   try {
-    // Pehle DB se try karo
+    // Pehle DB se try karega
     const dbPositions = await PositionsModel.find({});
     
     if (dbPositions && dbPositions.length > 0) {
       return res.json(dbPositions);
     }
     
-    // Nahi hai toh static data import karo
+    // otherwise static data import karega
     const { positions } = require('./data/data');
     res.json(positions);
     
